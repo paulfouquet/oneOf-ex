@@ -1,0 +1,60 @@
+{
+  "description": "Schema validating two different types (CatA & CatB).",
+  "oneOf": [
+    {
+      "type": "object",
+      "allOf": [
+        {
+          "required": [
+            "category"
+          ],
+          "properties": {
+            "category": {
+              "const": "CatA"
+            },
+            "properties": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "$ref": "#/definitions/fields"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "allOf": [
+        {
+          "type": "object",
+          "required": [
+            "category"
+          ],
+          "properties": {
+            "category": {
+              "const": "CatB"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "fields": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,29 @@
+[[package]]
+name = "jsonschema-rs"
+version = "0.13.1"
+description = "Fast JSON Schema validation for Python implemented in Rust"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "d016df44fdbefb31b77605a27a5233123aec0f7cc8da45e1eaddcf0c4a9e7212"
+
+[metadata.files]
+jsonschema-rs = [
+    {file = "jsonschema_rs-0.13.1-cp36-cp36m-macosx_10_15_x86_64.whl", hash = "sha256:5bb8d47655813df5daa5248121fb5d5e85590f6732b1ae9d7b031befbc1eb7fc"},
+    {file = "jsonschema_rs-0.13.1-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7f142afa5925587e684abe392fb5b19566aeb16424a2ee6b99d40b3539186a8f"},
+    {file = "jsonschema_rs-0.13.1-cp36-cp36m-win_amd64.whl", hash = "sha256:bc73b5ee3872ba415ff8178bb2d55cdc2e534c3f168dcb6d425173a81e71c97b"},
+    {file = "jsonschema_rs-0.13.1-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:e25ba6d69c2df0ea0cc0d9c8e795cac2180a432915fdaf2c25de2a752d68be61"},
+    {file = "jsonschema_rs-0.13.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9fe48ec2deb83a12d9561aea259783e5775521cb2c19a1796e054df5f42c1136"},
+    {file = "jsonschema_rs-0.13.1-cp37-cp37m-win_amd64.whl", hash = "sha256:ed69f6799ccbed169ba21521e1a71da0465e1280418024e824bf6950105f0ebf"},
+    {file = "jsonschema_rs-0.13.1-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:c69eac35092e5418ee2708b15f6ca91417187eca151d3e39f6abe3770bfe1ecc"},
+    {file = "jsonschema_rs-0.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:76580276aece055fa719338b2a7881e96ff845e1ae5ef5667bbfa4f7ece532ba"},
+    {file = "jsonschema_rs-0.13.1-cp38-cp38-win_amd64.whl", hash = "sha256:86731f8102aeb0dbaa4423dafc0aaa4928f1857fb61c38e090a31154c4077e66"},
+    {file = "jsonschema_rs-0.13.1-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:d770746ad92a548c07bea58c195eecb4b20ef9fba7a81c8fa45d8ac084af606d"},
+    {file = "jsonschema_rs-0.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ee1335319a291607b63f51d56d9e7fbc602a86cf0e1b361cc22661ac56edce0a"},
+    {file = "jsonschema_rs-0.13.1-cp39-cp39-win_amd64.whl", hash = "sha256:2b50ee23d978a0b47ec02a338fb86d2408af8eaed467c5cee996d6fdb56d8a21"},
+    {file = "jsonschema_rs-0.13.1.tar.gz", hash = "sha256:1c8e7f1a3df555d06fab4a2e1ef8e09bf730c554d11e1f5f3a7bbf390969a30d"},
+]

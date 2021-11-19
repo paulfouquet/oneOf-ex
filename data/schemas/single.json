@@ -1,0 +1,38 @@
+{
+    "description": "Schema validating only one type (CatA).",
+    "allOf": [
+      {
+        "type": "object",
+        "required": ["category"],
+        "properties": {
+          "category": {
+            "const": "CatA"
+          },
+          "properties": {
+            "allOf": [
+              {
+                "type": "object",
+                "required": ["id"]
+              },
+              {
+                "$ref": "#/definitions/fields"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "definitions": {
+        "fields": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "ID",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+  }
+  
