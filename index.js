@@ -14,10 +14,10 @@ async function test(){
     validatorSingle(testFile);
 
     validatorSingle.errors.forEach(error => {
-        console.log("Error for single schema: ", error.message)
+        console.log("Error for single schema: ", error.instancePath, " ", error.message)
     });
     validatorDual.errors.forEach(error => {
-        console.log("Error for dual schema: ", error.message)
+        console.log("Error for dual schema: ", error.instancePath, " ", error.message)
     });
 }
 
