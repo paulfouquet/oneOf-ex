@@ -3,11 +3,11 @@
 This is an example to show that `jsonschema-rs` (`Python`) does not return nested errors when a field in `oneOf` is not matching the correct type.
 However, `AJV` (`Javascript`) returns the nested errors.
 
-##Requirements
+## Requirements
 `poetry`
 `yarn`
 
-##Run
+## Run
 `jsonschema-rs` (`Python`)
 
 ```bash
@@ -23,7 +23,7 @@ yarn
 yarn index
 ```
 
-##Output
+## Output
 ```bash
 /oneOf-ex$ yarn index
 Error for single schema:  must be string
