@@ -1,0 +1,74 @@
+{
+    "description": "Schema validating two different types (CatA & CatB).",
+    "if": {
+      "properties": {
+        "type": {
+          "const": "Collection"
+        }
+      }
+    },
+    "then": {
+      "allOf": [
+        {
+          "required": [
+            "category"
+          ],
+          "properties": {
+            "category": {
+              "const": "CatA"
+            },
+            "properties": {
+              "allOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "$ref": "#/definitions/fields"
+                }
+              ]
+            }
+          }
+        }
+      ]
+      },
+      "else": {
+        "if": {
+          "properties": {
+            "type": {
+              "const": "Feature"
+            }
+          }
+      },
+        "then": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "category"
+            ],
+            "properties": {
+              "category": {
+                "const": "CatB"
+              }
+            }
+          }
+        ]
+      },
+      "else": false
+    },
+    "definitions": {
+      "fields": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "ID",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
