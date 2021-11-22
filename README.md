@@ -26,10 +26,10 @@ yarn index
 ## Output
 ```bash
 /oneOf-ex$ yarn index
-Error for single schema:  must be string
-Error for dual schema:  must be string
-Error for dual schema:  must be equal to constant
-Error for dual schema:  must match exactly one schema in oneOf
+Error for single schema:  /properties/id   must be string
+Error for dual schema:  /properties/id   must be string
+Error for dual schema:  /category   must be equal to constant
+Error for dual schema:     must match exactly one schema in oneOf
 /oneOf-ex$ python main.py 
 Error for single schema:  1234 is not of type "string"
 Error for dual schema:  {"category":"CatA","properties":{"id":1234}} is not valid under any of the given schemas
