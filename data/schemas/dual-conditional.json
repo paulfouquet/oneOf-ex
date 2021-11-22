@@ -1,74 +1,71 @@
 {
-    "description": "Schema validating two different types (CatA & CatB).",
+  "description": "Schema validating two different types (CatA & CatB).",
+  "if": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "const": "CatA"
+      }
+    }
+  },
+  "then": {
+    "allOf": [
+      {
+        "type": "object",
+        "required": ["category"],
+        "properties": {
+          "category": {
+            "const": "CatA"
+          },
+          "properties": {
+            "allOf": [
+              {
+                "type": "object",
+                "required": ["id"]
+              },
+              {
+                "$ref": "#/definitions/fields"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "else": {
     "if": {
+      "type": "object",
       "properties": {
-        "type": {
-          "const": "Collection"
+        "category": {
+          "const": "CatB"
         }
       }
     },
     "then": {
       "allOf": [
         {
-          "required": [
-            "category"
-          ],
+          "type": "object",
+          "required": ["category"],
           "properties": {
             "category": {
-              "const": "CatA"
-            },
-            "properties": {
-              "allOf": [
-                {
-                  "type": "object",
-                  "required": [
-                    "id"
-                  ]
-                },
-                {
-                  "$ref": "#/definitions/fields"
-                }
-              ]
+              "const": "CatB"
             }
           }
         }
       ]
-      },
-      "else": {
-        "if": {
-          "properties": {
-            "type": {
-              "const": "Feature"
-            }
-          }
-      },
-        "then": {
-        "allOf": [
-          {
-            "type": "object",
-            "required": [
-              "category"
-            ],
-            "properties": {
-              "category": {
-                "const": "CatB"
-              }
-            }
-          }
-        ]
-      },
-      "else": false
     },
-    "definitions": {
-      "fields": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "title": "ID",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      }
+    "else": false
+  },
+  "definitions": {
+    "fields": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   }
+}

@@ -1,38 +1,37 @@
 {
-    "description": "Schema validating only one type (CatA).",
-    "allOf": [
-      {
-        "type": "object",
-        "required": ["category"],
+  "description": "Schema validating only one type (CatA).",
+  "allOf": [
+    {
+      "type": "object",
+      "required": ["category"],
+      "properties": {
+        "category": {
+          "const": "CatA"
+        },
         "properties": {
-          "category": {
-            "const": "CatA"
-          },
-          "properties": {
-            "allOf": [
-              {
-                "type": "object",
-                "required": ["id"]
-              },
-              {
-                "$ref": "#/definitions/fields"
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "definitions": {
-        "fields": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "title": "ID",
-              "type": "string"
+          "allOf": [
+            {
+              "type": "object",
+              "required": ["id"]
+            },
+            {
+              "$ref": "#/definitions/fields"
             }
-          },
-          "additionalProperties": false
+          ]
         }
       }
+    }
+  ],
+  "definitions": {
+    "fields": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
   }
-  
+}

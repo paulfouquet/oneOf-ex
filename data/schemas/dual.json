@@ -5,9 +5,7 @@
       "type": "object",
       "allOf": [
         {
-          "required": [
-            "category"
-          ],
+          "required": ["category"],
           "properties": {
             "category": {
               "const": "CatA"
@@ -16,9 +14,7 @@
               "allOf": [
                 {
                   "type": "object",
-                  "required": [
-                    "id"
-                  ]
+                  "required": ["id"]
                 },
                 {
                   "$ref": "#/definitions/fields"
@@ -33,9 +29,7 @@
       "allOf": [
         {
           "type": "object",
-          "required": [
-            "category"
-          ],
+          "required": ["category"],
           "properties": {
             "category": {
               "const": "CatB"
